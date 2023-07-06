@@ -1,0 +1,13 @@
+Sure! Here's a comparison table highlighting the key differences between WebdriverIO and Mocha:
+
+| Aspect               | WebdriverIO                                                | Mocha                                                        |
+|----------------------|------------------------------------------------------------|--------------------------------------------------------------|
+| Purpose              | Browser automation and end-to-end testing                   | General-purpose JavaScript test framework                    |
+| API and Assertions   | Provides APIs for browser automation and assertions         | Does not provide built-in browser automation capabilities    |
+| Test Structure       | Relies on test runners like Mocha for test structure        | Provides clean syntax for structuring and running tests      |
+| Scope                | Browser automation, cross-browser testing, element interactions | Test execution and reporting for JavaScript code          |
+| Extensibility        | Extensive features for browser automation and reporting     | Flexible framework for using custom assertion libraries       |
+| Test Runners         | Supports multiple test runners, including Mocha             | Standalone test framework                                    |
+
+It's important to note that WebdriverIO and Mocha can be used together, where WebdriverIO serves as the browser automation framework and
+Mocha handles the test execution and reporting aspects.

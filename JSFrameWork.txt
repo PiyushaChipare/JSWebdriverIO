@@ -1,0 +1,112 @@
+Mocha Framework
+
+Why Mocha?
+*Asynchronous testing: It allows you to write tests that depend on the completion of
+asynchronous tasks without blocking the execution of other tests.
+
+*Flexible and extensible: Mocha offers a flexible and extensible architecture that 
+allows you to customize and extend its functionality according to your specific needs.
+You can use various plugins and libraries to enhance your testing capabilities and 
+integrate with other tools.
+
+*Rich feature set: Mocha provides a wide range of features such as test hooks,
+test reporters, test runners, and assertions. It supports various testing styles
+including  BDD (Behavior-Driven Development) and TDD (Test-Driven Development), 
+allowing you to choose the approach that suits your project best.
+
+*Easy to get started:  Mocha has a simple and intuitive API that makes it easy to
+get started with testing. Its test syntax is clean and readable, allowing you to 
+focus on writing meaningful and maintainable tests.
+
+In summary, Mocha is a powerful and widely-used testing framework for JavaScript 
+that offers a simple and flexible syntax, supports multiple testing styles, handles 
+asynchronous code, provides detailed reporting, and integrates with other tools to 
+enhance the testing process.
+=====================================================================================
+Components in Mocha Framework
+
+1. node_modules
+2.test
+    2.1 pageobject
+    2.2 specs
+3. jsconfig.json
+4. package.json
+5. wdio.conf.js
+6. allure-report
+7. allure-results
+
+1. node_modules:  
+    It is used to store all the dependencies like external libraries and packages; required by the project.
+These dependencies are specified in the package.json file, and when the project is initialized or when 
+new dependencies are installed, the corresponding packages are downloaded and stored in the node_modules folder.
+This folder should never be modified manually and is usually included in the project's .gitignore file to avoid
+including unnecessary files in version control.
+
+2.test:
+    It represents a directory where you can store your test files. It is a conventional location to organize
+your test cases/scripts in a project that utilizes the Mocha testing framework.
+    Mocha will automatically search for test files in the "test" folder (or any other specified location) 
+and execute them when you run your test suite using the Mocha command-line interface or a test runner.
+
+2.1 pageobject: 
+    It consists of all the POM(Project Object Model) classes that will be used in test script developement
+
+2.2 specs:
+    In is used to store all the test scripts written together.
+
+3. jsconfig.json:
+    To get autosuggestions of members added configuration in this json file.
+
+
+4. package.json
+    It is a file that contains metadata about project, including its dependencies, scripts, & other configurations.
+
+5. wdio.conf.js
+    This file is used to define the configuration options for the test runner. It specifies various settings such
+as the test framework (Mocha in this case), the browser capabilities, the desired test reporter, and other options
+related to test execution.
+
+    a. specs : It is a property which is used to define the test specification files or directories that will be
+executed during the test run.
+
+    b. exclude : It is a property which is used to define the test specification files or directories that will be
+excluded during the test run.
+
+    c. suites : It is a property which is used to define groups of test files or directories that you want to
+run together as a suite. It allows you to organize your tests into logical groups and execute them selectively.
+
+    d. maxInstances :  It is a property which is used to define the maximum number of browser instances that can
+run in parallel. It allows you to control the concurrency of your test execution.By default, WebdriverIO runs tests
+in  a single browser instance. However, if you want to run tests in parallel across multiple browser instances,
+you can set the maxInstances property to a desired number.
+
+    e. capabilities : It is a property which is used to define the capabilities or configuration of the browser
+instances in which the tests will be executed. Each browser instance is represented by a separate object within
+the capabilities array.
+
+    browserName: The name of the browser (e.g., "chrome", "firefox", "safari").
+    browserVersion: The specific version of the browser.
+    platformName: The operating system platform on which the browser should run (e.g., "Windows", "macOS", "Linux").
+    maxInstances: The maximum number of browser instances that can run in parallel.
+    seleniumVersion: The version of the Selenium WebDriver to use.
+    Additional capabilities specific to each browser or driver.
+
+    f. bail : It is a property which is used to control the behavior of the test execution when a test case fails.
+It determines whether the test execution should continue or stop immediately after the first test failure occurs.
+It has a default value of 0 (disabled). 
+
+    g. baseUrl : It is a property which is used to set a base URL in order to shorten url command calls. If your 
+url parameter starts with `/`, the base url gets prepended, not including the path portion of your baseUrl.
+If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url gets prepended directly.
+
+    h. waitforTimeout : Default timeout for all waitFor* commands
+    connectionRetryCount : Default request retries count 
+    connectionRetryTimeout : Default timeout in milliseconds for request if browser driver or
+                             grid doesn't send response
+    services : Services take over a specific job you don't want to take care of. They enhance
+                your test setup with almost no effort. Unlike plugins, they don't add new
+                commands. Instead, they hook themselves up into the test process.
+    Hooks : WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
+            it and to build services around it. You can either apply a single function or an array of
+            methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
+            resolved to continue.
