@@ -1,9 +1,6 @@
 //ar expect = require('chai').expect
 import expect from 'chai';
 import assert from 'chai';
-import wPage from '../Ujetix/test/pageobjects/WelcomePage.js';
-import alPage from '../Ujetix/test/pageobjects/AdminLoginPage.js'
-import ahPage from './test/pageobjects/AdminHomePage.js';
 
 
 export const config = {
@@ -31,8 +28,8 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        // './test/specs/**/*.js'
-        './test/specs/Practice/Trial.js'
+        './test/specs/**/*.js'
+        // './test/specs/Practice/Trial.js'
     ],
     // Patterns to exclude.
     exclude: [
