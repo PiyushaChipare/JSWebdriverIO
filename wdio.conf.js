@@ -85,7 +85,7 @@ export const config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'error',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -246,14 +246,14 @@ export const config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: async function (test, context) {
+    beforeTest: async function (test, context) {
     //     await browser.maximizeWindow();
     //     await browser.url('http://rmgtestingserver/domain/Online_Tourism_Management_System/')
     //     await wPage.goToAdminLoginPage();
     //     await alPage.loginAsAdmin('admin','Test@123');
 
-    //     console.log('beforeTest');
-    // },
+        console.log('beforeTest');
+    },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
@@ -279,7 +279,7 @@ export const config = {
     afterTest: function(test, context, { error, result, duration, passed, retries })
     { 
         // console.log('will take screen shot now and close the browser');
-        // console.log('afterTest');
+        console.log('afterTest');
         // await ahPage.logoutAdmin();
         // await alPage.goToWelcomePAge();
         if (error)
@@ -323,9 +323,9 @@ export const config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    afterSession: function (config, capabilities, specs) {
-        console.log('afterSession');
-    },
+    // afterSession: function (config, capabilities, specs) {
+    //     console.log('afterSession');
+    // },
     /**
      * Gets executed after all workers got shut down and the process is about to exit. An error
      * thrown in the onComplete hook will result in the test run failing.
