@@ -10,4 +10,4 @@ Sure! Here's a comparison table highlighting the key differences between Webdriv
 | Test Runners         | Supports multiple test runners, including Mocha             | Standalone test framework                                    |
 
 It's important to note that WebdriverIO and Mocha can be used together, where WebdriverIO serves as the browser automation framework and
-Mocha handles the test execution and reporting aspects.
+Mocha handles the test execution and reporting aspects. 
